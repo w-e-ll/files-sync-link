@@ -1,0 +1,23 @@
+sftp_batch_size: 100
+sftp_timeout: 600
+
+sftp_sources:
+    test-stream-transfer:
+         source: '/home/<user_id>/<project>/dir1/'
+         username: '<user_id>'
+         host: '<server_ip>'
+         password: '<password>'
+         ssh_key: ['~/.ssh/<server_ip>']
+         port: 22
+         files: '*.txt'
+         local_incoming: '/home/<user_id>/<project>/incoming/'
+         local_archive: '/home/<user_id>/<project>/archive/'
+         check_free_space: '/home/<user_id>/apps:10000'
+         priority: 1000
+
+scheduler:
+    sftp_check_timeout: 30
+    sftp_jobs: 1
+
+concurrency_limit:
+    limit: 1000

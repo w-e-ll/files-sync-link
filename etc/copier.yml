@@ -1,0 +1,18 @@
+file_sources:
+
+    str5-stream-linker:
+         incoming: '/home/<user_id>/test/downloaded/incoming/'
+         copy_to:
+             archive:
+                dir: '/home/<user_id>/apps/files_sync_link_new/archive/'
+                quota: 6096
+
+             prod:
+                dir: '/home/<user_id>/apps/files_sync_link_new/prod/'
+                quota: 6096
+
+scheduler:
+    file_check_timeout: 120
+
+concurrency_limit:
+    limit: 1000
